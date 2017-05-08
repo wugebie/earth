@@ -1,0 +1,70 @@
+/*--------------reset--------------*/
+body,p,h1,h2,h3,h4,h5,h6,dl,dd{
+	margin:0;	
+}
+body{
+	font:12px "微软雅黑";	
+}
+ul,ol{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+h1,h2,h3,h4,h5,h6,strong,b{
+	font-weight:normal;	
+}
+a{
+	text-decoration:none;
+	color:;
+}
+img{
+	vertical-align:top;
+	border:none;	
+}
+i,em{
+	font-style:normal;	
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.clearfix{
+	zoom:1;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float: right;
+}
+td{
+	padding:0
+}
+input{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: 0;
+}
+fieldset{
+	border: none;
+	border-top:1px solid #c9dca6;
+	margin:0;
+	padding:0;	
+}
+a{
+	text-decoration: none;
+	/*清除点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android)*/
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	}
+input{
+	-webkit-tap-highlight-color:transparent;
+	-webkit-appearance: none;
+	}
+	/*消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式*/ 
+
+

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script>
+			var bang = {
+				endZoom: 2,//最终的缩放大小
+				logoRotation: 5,//旋转弧度
+				debrisSpeed: 5,//碎片的旋转速度
+				debrisScale: 2,//碎片的缩放比
+				isNew: {},//有更新的话存放的地方
+				scale: {}//缩放比例
+			};
+		</script>
+	</head>
+	<body>
+		<div id="loader">
+			Loading<span>.</span><span>.</span><span>.</span>
+			<video>
+				<source src="MP4/introanimasjon.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="content insta"></div>
+		<div class="content" id="about">
+			<script>
+				bang.isNew.about = false;
+				bang.scale.about = parseFloat('1.5') || 1;
+			</script>
+			<h2>It´s all in your mind</h2>
+			<p>我，一个强迫症少年，一个完美主义的骚年，一个在路上的少年</p>
+			<p>曾经为了一个像素修改一天，曾经为了好了创意而一夜未眠，曾经为了一腔热血而放弃风光无限，我就是那个不爱安稳，爱挑战，不爱香烟啤酒，爱键盘和页面，不爱等待问题被解决，爱解决问题的人</p>
+			<p>我可以接受失败，但不能接受放弃和那个曾经不努力的自己，有人问我如果比分落后了怎么办？我说:还是要一分一分的追上去！</p>
+			<img src="./img/mikkel-skull.gif" class="skille" alt="Mikkel Bang">
+			<h2 class="thank">A big thanks to... </h2>
+			<p>someone who help me and support me as always</p>
+			<p class="logos">
+				<a href="http://www.baidu.com" target="_blank"><img src="./img/shallowtree.png" alt="The Shallow Tree"></a>
+				<a href="https://github.com/wugebie" target="_blank"><img src="./img/mustasj.png" alt="Mustasj"></a>
+				<a href="javascript:;" target="_blank"><img src="./img/maskinen.png" alt="Maskinen"></a>
+			</p>
+		</div>
+
+		<div class="content" id="merits">
+			<script>
+				bang.isNew.merits = true;
+				bang.scale.merits = parseFloat('1.5') || 1;
+			</script>
+			<div>
+				<h2>主要技能</h2>
+				<ul>
+					<li>精通HTML</li>
+					<li>精通CSS</li>
+					<li>精通Javascript</li>
+					<li>熟练jQuery</li>
+					<li>熟悉css3</li>
+					<li>熟悉HTHL5</li>
+					<li>了解React</li>
+					<li>了解Three.js</li>
+				</ul>
+			</div>
+			<div>
+				<h2>教育背景</h2>
+				<ul>
+					<li>内蒙古工业大学</li>
+					<li>统招本科</li>
+				</ul>
+			</div>
+			<div>
+				<h2>联系方式</h2>
+				<ul>
+					<li>电话：18888888888</li>
+					<li>邮箱：123456789.com</li>
+				</ul>
+			</div>
+			<div>
+				<h2>工作经验</h2>
+				<ul>
+					<li>2013-2014 中国华能</li>
+					<li>2014-2017 中微信通</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="mobileContent" id="allSponsors">
+			<!--<div class="content" id="burton">
+				<script>
+					bang.isNew.burton = false;
+					bang.scale.burton = parseFloat('0.6') || 1;
+				</script>
+				
+			</div>
+			<div class="content" id="oakley">
+				<script>
+					bang.isNew.oakley = false;
+					bang.scale.oakley = parseFloat('0.4') || 1;
+				</script>
+				
+			</div>
+			<div class="content" id="nixon">
+				<script>
+					bang.isNew.nixon = false;
+					bang.scale.nixon = parseFloat('0.4') || 1;
+				</script>
+				
+			</div>
+			<div class="content" id="session">
+				<script>
+					bang.isNew.session = false;
+					bang.scale.session = parseFloat('0.4') || 1;
+				</script>
+				
+			</div>
+			<div class="content" id="hemsedal">
+				<script>
+					bang.isNew.hemsedal = false;
+					bang.scale.hemsedal = parseFloat('0.4') || 1;
+				</script>
+				
+			</div>-->
+		</div>
+
+		<div class="content" id="videos">
+			<script>
+				bang.isNew.videos = 'ja' == 'ja';
+				bang.scale.videos = parseFloat('1.5') || 1;
+			</script>
+			<div>
+				<a data-url="http://player.youku.com/embed/XMTUyMjI3NTg1Mg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/01A.jpg);">
+					<img src="./img/105x60">
+					<span><span>第01话A 开始之结束和结束之开始</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTUyMjI5MDAyNA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/01B.jpg);">
+					<img src="./img/105x60">
+					<span><span>第01话B 开始之结束和结束之开始</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTUzMDI4NDQyMA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/02.jpg);">
+					<img src="./img/105x60">
+					<span><span>第02话 重逢的魔女</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTUzNzUxNDkxNg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/03.jpg);">
+					<img src="./img/105x60">
+					<span><span>第03话 从零开始的异世界生活</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTU0NjkwODMyOA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/04.jpg);">
+					<img src="./img/105x60">
+					<span><span>第04话 罗兹瓦尔宅邸的团聚</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTU1MjQwMjAyOA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/05.jpg);">
+					<img src="./img/105x60">
+					<span><span>第05话 约定的早晨很遥远</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTU2MzIwNTYzNg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/06.jpg);">
+					<img src="./img/105x60">
+					<span><span>第06话 锁链的声音</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTU3MTcwNTQ4NA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/07.jpg);">
+					<img src="./img/105x60">
+					<span><span>第07话 菜月·昴的重新开始</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTU4MDI0MDg4OA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/08.jpg);">
+					<img src="./img/105x60">
+					<span><span>第08话 因为已经哭过喊过停止了哭泣</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTU4ODk5NTgyNA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/09.jpg);">
+					<img src="./img/105x60">
+					<span><span>第09话 勇气的意义</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTU5NzQzMjk2MA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/10.jpg);">
+					<img src="./img/105x60">
+					<span><span>第10话 鬼上身的做法</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTYwNTk3MjAwMA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/11.jpg);">
+					<img src="./img/105x60">
+					<span><span>第11话 蕾姆</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTYxMjg4NTEwOA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/12.jpg);">
+					<img src="./img/105x60">
+					<span><span>第12话 再次来到王都</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTYyMTgxNzE5Ng==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/13.jpg);">
+					<img src="./img/105x60">
+					<span><span>第13话 自称骑士菜月·昴</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTYzMDAyOTc2NA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/14.jpg);">
+					<img src="./img/105x60">
+					<span><span>第14话 名为绝望的疾病</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTYzODM2MzU5Mg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/15.jpg);">
+					<img src="./img/105x60">
+					<span><span>第15话 疯狂的外侧</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTY0NzA3Mzg3Ng==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/16.jpg);">
+					<img src="./img/105x60">
+					<span><span>第16话 猪的欲望</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTY1NjgxMDYxNg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/17.jpg);">
+					<img src="./img/105x60">
+					<span><span>第17话 丑态的尽头</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTY2NTkyMzAwMA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/18.jpg);">
+					<img src="./img/105x60">
+					<span><span>第18话 从零开始</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTY3NTAyODY5Ng==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/19.jpg);">
+					<img src="./img/105x60">
+					<span><span>第19话 白鲸攻略战</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTY4NDgwMjM2OA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/20.jpg);">
+					<img src="./img/105x60">
+					<span><span>第20话 威尔海姆·范·阿斯特蕾亚</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTY5NTM5OTMzNg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/21.jpg);">
+					<img src="./img/105x60">
+					<span><span>第21话 反抗绝望的赌博</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTcwNDk5MjE4NA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/22.jpg);">
+					<img src="./img/105x60">
+					<span><span>第22话 怠惰一闪</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTcxNDE2MzgzMg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/23.jpg);">
+					<img src="./img/105x60">
+					<span><span>第23话 恶毒的怠惰</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTcyMzA4NDU3Mg==' frameborder=0 'allowfullscreen" class="new" style="background-image: url(videosimg/24.jpg);">
+					<i>NEW</i> <img src="./img/105x60">
+					<span><span>第24话 自称骑士和最优秀的骑士</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTcyOTc5NzkzNg==' frameborder=0 'allowfullscreen" class="new" style="background-image: url(videosimg/25.jpg);">
+					<i>NEW</i> <img src="./img/105x60">
+					<span><span>第25话 仅此而已的故事</span></span>
+				</a>	
+			</div>
+			<div class="player desktop">
+				<iframe src="./img/saved_resource.html" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+			</div>
+		</div>
+		<div class="content" id="behind-the-scenes">
+			<script>
+				bang.isNew.behind_the_scenes = false;
+				bang.scale.behind_the_scenes = 1.5
+			</script>
+			<div>
+				<a data-url="http://player.youku.com/embed/XMjU4ODQ4ODEzMg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<i>NEW</i> <img src="./img/105x60">
+					<span><span>【09DOTA高分局】小鱼</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMjUxNjYyNTE1Mg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【09DOTA高分局】瞬间崛起的UG</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMjQ5MjQ0MjQyNA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【牛蛙dota】美杜莎，另类出装的暴走</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMjQ5OTczMTU5Mg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【小乖dota】这个毒龙特别毒！</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMjUwNTQ0MzYxNg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【09DOTA高分局】中单火猫</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMjUxMzk3MjM0OA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【牛蛙dota】炸弹人，炸出一片新天地</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTkyOTUzMjgyOA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【09DOTA高分局】150人头局女王</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMjU0MjY0NzcxMg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【小乖dota】高分质量局火枪</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMjY1Njg4NTIwMA==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【牛蛙dota】史上最装逼的地卜师</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTg5MTM5MjAzNg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【09DOTA高分局】中单海民</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTg4MzQ0OTY5Ng==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【牛蛙dota】幻影长矛手</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMTg2NzA5ODYxNg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【情书DOTA解说】崩盘大鱼人</span></span>
+				</a>
+				<a data-url="http://player.youku.com/embed/XMjMzMTkxOTMxNg==' frameborder=0 'allowfullscreen" style="background-image: url(videosimg/dota1.jpg);">
+					<img src="./img/105x60">
+					<span><span>【09DOTA高分局】逆风SF</span></span>
+				</a>
+			</div>
+			<div class="player desktop">
+				<iframe src="./img/saved_resource.html" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+			</div>
+		</div>
+		<div class="content" id="photos">
+			<script>
+				bang.isNew.photos = false;
+				bang.scale.photos = parseFloat('1.5') || 1;
+			</script>
+			<ul class="flip">
+				<li class="active"><img data-thumb="photos/little/Enviro_Japan_Blotto_6525.jpg" data-src="photos/big/Enviro_Japan_Blotto_6525.jpg"></li>
+				<li><img data-thumb="photos/little/Enviro_Mammoth_Blotto_3761.jpg" data-src="photos/big/Enviro_Mammoth_Blotto_3761.jpg"></li>
+				<li><img data-thumb="photos/little/Enviro_SquawValley_Blotto-1062.jpg" data-src="photos/big/Enviro_SquawValley_Blotto-1062.jpg"></li>
+				<li><img data-thumb="photos/little/Frends_Mammoth_Blotto_1989.jpg" data-src="photos/big/Frends_Mammoth_Blotto_1989.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Canada_Blotto_0395.jpg" data-src="photos/big/GroupLife_Canada_Blotto_0395.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Canada_Blotto_0411.jpg" data-src="photos/big/GroupLife_Canada_Blotto_0411.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Canada_Blotto_0435.jpg" data-src="photos/big/GroupLife_Canada_Blotto_0435.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Canada_Blotto_3922.jpg" data-src="photos/big/GroupLife_Canada_Blotto_3922.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Canada_Blotto_5130.jpg" data-src="photos/big/GroupLife_Canada_Blotto_5130.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Canada_Blotto-1810.jpg" data-src="photos/big/GroupLife_Canada_Blotto-1810.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Filefjell_Blotto-0185.jpg" data-src="photos/big/GroupLife_Filefjell_Blotto-0185.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Heavenly_Blotto_0875.jpg" data-src="photos/big/GroupLife_Heavenly_Blotto_0875.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Hodevik_Blotto_0859.jpg" data-src="photos/big/GroupLife_Hodevik_Blotto_0859.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Hodevik_Blotto-1020596.jpg" data-src="photos/big/GroupLife_Hodevik_Blotto-1020596.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Mammoth_Blotto_1114.jpg" data-src="photos/big/GroupLife_Mammoth_Blotto_1114.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_Mammoth_Blotto_4555.jpg" data-src="photos/big/GroupLife_Mammoth_Blotto_4555.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_MtHuttAug2013_Blotto-0243.jpg" data-src="photos/big/GroupLife_MtHuttAug2013_Blotto-0243.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_NewZealand2012_Blotto_6301.jpg" data-src="photos/big/GroupLife_NewZealand2012_Blotto_6301.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_NewZealand2012_Blotto_6303.jpg" data-src="photos/big/GroupLife_NewZealand2012_Blotto_6303.jpg"></li>
+				<li><img data-thumb="photos/little/GroupLife_WanakaNz_Blotto_7779.jpg" data-src="photos/big/GroupLife_WanakaNz_Blotto_7779.jpg"></li>
+				<li><img data-thumb="photos/little/McMorris_WanakaNz_Blotto_7782.jpg" data-src="photos/big/McMorris_WanakaNz_Blotto_7782.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_AirStyle_Blotto_7105.jpg" data-src="photos/big/Mikkel_AirStyle_Blotto_7105.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_BearMtn_Blotto-1382.jpg" data-src="photos/big/Mikkel_BearMtn_Blotto-1382.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Canada_Blotto_0098.jpg" data-src="photos/big/Mikkel_Canada_Blotto_0098.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Canada_Blotto_0364.jpg" data-src="photos/big/Mikkel_Canada_Blotto_0364.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Canada_Blotto_1000064.jpg" data-src="photos/big/Mikkel_Canada_Blotto_1000064.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Canada_Blotto_3270.jpg" data-src="photos/big/Mikkel_Canada_Blotto_3270.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Canada_Blotto_3322.jpg" data-src="photos/big/Mikkel_Canada_Blotto_3322.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Canada_Blotto_3439.jpg" data-src="photos/big/Mikkel_Canada_Blotto_3439.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Canada_Blotto_3881.jpg" data-src="photos/big/Mikkel_Canada_Blotto_3881.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Canada_Blotto_3925.jpg" data-src="photos/big/Mikkel_Canada_Blotto_3925.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Canada_Blotto_5137.jpg" data-src="photos/big/Mikkel_Canada_Blotto_5137.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Canada_Blotto_5364.jpg" data-src="photos/big/Mikkel_Canada_Blotto_5364.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Canada_Blotto-1765.jpg" data-src="photos/big/Mikkel_Canada_Blotto-1765.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Co_Blotto_7499.JPG" data-src="photos/big/Mikkel_Co_Blotto_7499.JPG"></li>
+				<li><img data-thumb="photos/little/Mikkel_Filefjell_Blotto_0427.jpg" data-src="photos/big/Mikkel_Filefjell_Blotto_0427.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Filefjell_Blotto_0682.jpg" data-src="photos/big/Mikkel_Filefjell_Blotto_0682.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Germany_Blotto_1000564.JPG" data-src="photos/big/Mikkel_Germany_Blotto_1000564.JPG"></li>
+				<li><img data-thumb="photos/little/Mikkel_Heavenly_Blotto_1580.jpg" data-src="photos/big/Mikkel_Heavenly_Blotto_1580.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Heavenly_Blotto_5990.jpg" data-src="photos/big/Mikkel_Heavenly_Blotto_5990.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Heavenly_Blotto_6858.jpg" data-src="photos/big/Mikkel_Heavenly_Blotto_6858.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Heavenly_Blotto_6882.jpg" data-src="photos/big/Mikkel_Heavenly_Blotto_6882.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Heavenly_Blotto_6900.jpg" data-src="photos/big/Mikkel_Heavenly_Blotto_6900.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_HighFives2012_Blotto_7032.jpg" data-src="photos/big/Mikkel_HighFives2012_Blotto_7032.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Hodevik_Blotto-1020714.jpg" data-src="photos/big/Mikkel_Hodevik_Blotto-1020714.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Hood_Blotto_5281.JPG" data-src="photos/big/Mikkel_Hood_Blotto_5281.JPG"></li>
+				<li><img data-thumb="photos/little/Mikkel_IcelandDec2012_Blotto_2081.jpg" data-src="photos/big/Mikkel_IcelandDec2012_Blotto_2081.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_IcelandDec2012_Blotto_2269.jpg" data-src="photos/big/Mikkel_IcelandDec2012_Blotto_2269.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Italy_Blotto.jpg" data-src="photos/big/Mikkel_Italy_Blotto.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_1574.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_1574.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_1924.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_1924.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_1955.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_1955.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_1962.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_1962.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_2797.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_2797.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_2862.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_2862.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_3866.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_3866.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_3955.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_3955.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_4337.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_4337.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_4355.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_4355.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_4439.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_4439.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_4528.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_4528.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Mammoth_Blotto_4533.jpg" data-src="photos/big/Mikkel_Mammoth_Blotto_4533.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_NewZealand2012_Blotto_6295.jpg" data-src="photos/big/Mikkel_NewZealand2012_Blotto_6295.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Norway_Blotto_1381.jpg" data-src="photos/big/Mikkel_Norway_Blotto_1381.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Norway_Blotto_1546.jpg" data-src="photos/big/Mikkel_Norway_Blotto_1546.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Norway_Blotto_1860.jpg" data-src="photos/big/Mikkel_Norway_Blotto_1860.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Nz_Blotto_5467.jpg" data-src="photos/big/Mikkel_Nz_Blotto_5467.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Nz_Blotto_5779.jpg" data-src="photos/big/Mikkel_Nz_Blotto_5779.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Oslo_Blotto-1030018.jpg" data-src="photos/big/Mikkel_Oslo_Blotto-1030018.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Oslo_Blotto-1030019.jpg" data-src="photos/big/Mikkel_Oslo_Blotto-1030019.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Oslo_Blotto-1030042.jpg" data-src="photos/big/Mikkel_Oslo_Blotto-1030042.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Oslo_Blotto-1030058.jpg" data-src="photos/big/Mikkel_Oslo_Blotto-1030058.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_PeacePipe_Blotto_9130.jpg" data-src="photos/big/Mikkel_PeacePipe_Blotto_9130.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_PeacePipe_Blotto_9280.jpg" data-src="photos/big/Mikkel_PeacePipe_Blotto_9280.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_PeacePipe_Blotto_9421.jpg" data-src="photos/big/Mikkel_PeacePipe_Blotto_9421.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_SnowPark_Blotto_3562.jpg" data-src="photos/big/Mikkel_SnowPark_Blotto_3562.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_SnowParkNz_Blotto_8886.jpg" data-src="photos/big/Mikkel_SnowParkNz_Blotto_8886.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_SnowParkNz_Blotto_9072.jpg" data-src="photos/big/Mikkel_SnowParkNz_Blotto_9072.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_SnowParkNz_Blotto_9305.jpg" data-src="photos/big/Mikkel_SnowParkNz_Blotto_9305.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Swiss_Blotto_0015.jpg" data-src="photos/big/Mikkel_Swiss_Blotto_0015.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Swiss_Blotto_2742.jpg" data-src="photos/big/Mikkel_Swiss_Blotto_2742.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Swiss_Blotto_2899.jpg" data-src="photos/big/Mikkel_Swiss_Blotto_2899.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Tahoe_Blotto_3038.jpg" data-src="photos/big/Mikkel_Tahoe_Blotto_3038.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Tahoe_Blotto_3126.jpg" data-src="photos/big/Mikkel_Tahoe_Blotto_3126.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Tahoe_Blotto_3222.jpg" data-src="photos/big/Mikkel_Tahoe_Blotto_3222.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Tahoe_Blotto-0912.jpg" data-src="photos/big/Mikkel_Tahoe_Blotto-0912.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Tahoe_Blotto-0933.jpg" data-src="photos/big/Mikkel_Tahoe_Blotto-0933.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Tahoe_Blotto-1214.jpg" data-src="photos/big/Mikkel_Tahoe_Blotto-1214.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_TrebleCone_Blotto_1625.jpg" data-src="photos/big/Mikkel_TrebleCone_Blotto_1625.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_TrebleCone_Blotto_1813.jpg" data-src="photos/big/Mikkel_TrebleCone_Blotto_1813.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Vermont_Blotto_0233.jpg" data-src="photos/big/Mikkel_Vermont_Blotto_0233.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Vermont_Blotto_0236.jpg" data-src="photos/big/Mikkel_Vermont_Blotto_0236.jpg"></li>
+				<li><img data-thumb="photos/little/Mikkel_Vermont_Blotto_0238.jpg" data-src="photos/big/Mikkel_Vermont_Blotto_0238.jpg"></li>
+				<li><img data-thumb="photos/little/MikkelBang_Austria2.jpg" data-src="photos/big/MikkelBang_Austria2.jpg"></li>
+				<li><img data-thumb="photos/little/MikkelBang_Austria3.jpg" data-src="photos/big/MikkelBang_Austria3.jpg"></li>
+				<li><img data-thumb="photos/little/MikkelBang_Brandywine2014_Blotto_5990.jpg" data-src="photos/big/MikkelBang_Brandywine2014_Blotto_5990.jpg"></li>
+				<li><img data-thumb="photos/little/MikkelBang_Brandywine2014_Blotto_6097.jpg" data-src="photos/big/MikkelBang_Brandywine2014_Blotto_6097.jpg"></li>
+				<li><img data-thumb="photos/little/MikkelBang_Canada2014_Blotto_5842.jpg" data-src="photos/big/MikkelBang_Canada2014_Blotto_5842.jpg"></li>
+				<li><img data-thumb="photos/little/MikkelBang_CanadaMarch2014_Blotto_5877.jpg" data-src="photos/big/MikkelBang_CanadaMarch2014_Blotto_5877.jpg"></li>
+				<li><img data-thumb="photos/little/MikkelBang_CraigsProtoLab_Blotto_3550.jpg" data-src="photos/big/MikkelBang_CraigsProtoLab_Blotto_3550.jpg"></li>
+			</ul>
+			<div class="fullscreen desktop" style="background-image: url(photos/big/Enviro_Japan_Blotto_6525.jpg);"></div>
+			
+		</div>
+	
+		
+		<img src="img/close.png" class="close">
+		
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/three.min.js"></script>
+		<script src="js/TweenLite.min.js"></script>
+		<script src="js/ScrollToPlugin.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/OBJLoader.js"></script>
+		
+		<script src="js/3dxingqiu.js"></script>
+	</body>
+</html>

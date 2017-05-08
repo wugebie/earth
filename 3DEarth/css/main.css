@@ -1,0 +1,457 @@
+/*transform-style: preserve-3d;//使被转换的子元素保留其 3D 转换：
+perspective: 800px;景深
+请与 perspective-origin 属性一同使用该属性，这样您就能够改变 3D 元素的底部位置。
+如果你的元素设置了transform-style值为preserve-3d，就不能为了防止子元素溢出容器而设置overflow值为hidden，如果设置了overflow:hidden同样可以迫死子元素出现在同一平面（和元素设置了transform-style为flat一样的效果）*/
+
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;/*怪异盒模型,宽高包括padding和border*/
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  outline: 0;
+  text-decoration: none;
+  color: inherit;
+}
+/*------------------loader---------------------*/
+#loader {
+  font-size: 13vw;/*css3 1vh 等于1/100的视口高度，1vw 等于1/100的视口宽度。*/
+  font-family: "simply-mono";
+  color: #fff;
+  text-align: center;
+  background: #000000 url('../img/galaxy_starfield.jpg') left 1000px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all .7s ease;
+  z-index: 999;
+}
+#loader.done {
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+#loader span {
+  display: inline-block;
+  vertical-align: middle;
+  transition: opacity .3s ease;
+}
+#loader video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+#loader:after {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body{
+  overflow: hidden;
+  background: #000000 url('../img/galaxy_starfield.jpg') left 1000px;
+  transition: background 1s .3s ease;
+}
+body.ship{
+  background-position: left top;
+  transition: background 1s ease;
+}
+body.stoptransition {
+  transition: none;
+}
+canvas {
+  transition: all 1s .3s ease;
+  position: absolute;
+  bottom: 0;
+}
+.ship canvas {
+  bottom: 100%;
+  transition: all 1s ease;
+}
+ 
+.close {
+  position: fixed;
+  top: 102%;
+  right: 2%;
+  cursor: pointer;
+  z-index: 999;
+  -webkit-transition: top 1s ease;
+  -moz-transition: top 1s ease;
+  -o-transition: top 1s ease;
+  transition: top 1s ease;
+}
+.ship .close {
+  top: 2%;
+}
+/*---------------content-----------------*/
+.content {
+ 	height: 0;
+ 	overflow: hidden;
+ 	padding: 0;
+  color: #fff;
+  font-size: 18px;
+	position: absolute;
+	top: 100%;
+  left: 0%;
+  right: 0;
+  z-index: 2;
+  transition: top 1s ease, height 1s ease, padding 1s ease;
+}
+.content.show {
+  display: block;
+  top: 0;
+  height: 100%;
+  padding: 5% 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: top 1s .5s ease, padding 1s .6s ease;
+  -webkit-perspective: 800px;/*属性定义 3D 元素距视图的距离，以像素计,其子元素会获得透视效果，而不是元素本身。*/
+  -moz-perspective: 800px;/*请与 perspective-origin 属性一同使用该属性，这样您就能够改变 3D 元素的底部位置。*/
+  perspective: 800px;
+}
+.content.show .close {
+  position: fixed;
+}
+.content .close {
+  position: absolute;
+  z-index: 999;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+  display: none;
+}
+.content p,
+.content ul,
+.content h2,
+.content .homepage {
+  width: 80%;
+  margin: 1em auto;
+  max-width: 600px;
+}
+.content strong,
+.content h2 {
+  color: #fff;
+  font-size: 3vw;
+  font-family: 'dakota-alternate';
+  font-weight: normal;
+  text-transform: uppercase;
+  -webkit-transform: translateZ(40px);
+  -moz-transform: translateZ(40px);
+  -o-transform: translateZ(40px);
+  -ms-transform: translateZ(40px);
+  transform: translateZ(40px);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.content .homepage {
+  display: block;
+  color: #fff;
+  margin-top: 3em;
+  font-size: 1.2em;
+  font-family: 'dakota-alternate';
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.content ul {
+  width: 100%;
+  padding: 0 0 0 19px;
+  margin-top: -0.5em;
+  list-style: none;
+}
+.content ul li img {
+  width: 100%;
+}
+
+/*-------------content#about----------------*/
+.content#about .skille {
+ 	display: block;
+  margin: 8em auto; 
+}
+.content#about .logos {
+  text-align: justify;	/*实现两端对齐文本效果。*/
+}
+.content#about .logos:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+/*---------------merits-------------------*/
+.content#merits h2 {
+    position: relative;
+    text-indent: -87px;
+    font-size: 2em;
+    //margin-bottom: 20px;
+  }
+  .content#merits h2:after {
+    content: "";
+    background: #fff;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    left: -90px;
+    right: -2%;
+    height: 4px;
+  }
+  .content#merits ul {
+    //margin-top: 0px;
+  }
+/*-------------content#photos----------------*/
+.content#photos {
+  overflow: hidden;
+  padding: 0;
+}
+  
+.content#photos:before {
+	content: "";
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  left: 10px;
+ 	right: 10px;
+  top: 50%;
+  margin-top: -2px;
+  z-index: 2;
+ }
+.content#photos:after {
+  content: "BLOTTO";
+  font-size: 4vh;
+  font-family: 'dakota-alternate';
+  font-weight: normal;
+  text-transform: uppercase;/*无论Html大写还是小写都大写*/
+  position: absolute;
+  top: 50%;
+  right: 36.5%;
+  margin-top: -2.7vh;
+}
+
+.content#photos ul {
+  width: 102%;
+  max-width: none;
+  height: 100%;
+  padding: 45% 90% 50% 2%;
+  margin: 0;
+  overflow: auto;
+  position: relative;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  perspective: 800px;
+  -webkit-perspective-origin: 5% 50%;
+  -moz-perspective-origin: 5% 50%;
+  perspective-origin: 5% 50%;
+}
+.content#photos ul li {
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  -webkit-transition: all 0.6s ease, opacity 0.3s ease;
+  -moz-transition: all 0.6s ease, opacity 0.3s ease;
+  -o-transition: all 0.6s ease, opacity 0.3s ease;
+  transition: all 0.6s ease, opacity 0.3s ease;
+  -webkit-transform-origin: 0% 0%;
+  -moz-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+}
+.content#photos ul li:last-child {
+  margin: 0;
+}
+.content#photos ul li.future {
+  opacity: 0;
+  -webkit-transform: rotateX(-90deg) translate(0px, 30px);
+  -moz-transform: rotateX(-90deg) translate(0px, 30px);
+  -o-transform: rotateX(-90deg) translate(0px, 30px);
+  -ms-transform: rotateX(-90deg) translate(0px, 30px);
+  transform: rotateX(-90deg) translate(0px, 30px);
+}
+.content#photos ul li.past {
+  opacity: 0;
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  -webkit-transform: rotateX(90deg) translate(0, -30px);
+  -moz-transform: rotateX(90deg) translate(0, -30px);
+  -o-transform: rotateX(90deg) translate(0, -30px);
+  -ms-transform: rotateX(90deg) translate(0, -30px);
+  transform: rotateX(90deg) translate(0, -30px);
+}
+.content#photos .fullscreen {
+  position: absolute;
+  top: 2%;
+  left: 140px;
+  right: 2%;
+  bottom: 2%;
+  background: no-repeat center center;
+  background-size: contain;/*把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。*/
+  transition: opacity .2s ease;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.content#photos .fullscreen.change {
+  opacity: 0;
+}
+/*-----------content#videos&&content#behind-the-scenes------------*/
+.content#videos,
+.content#behind-the-scenes {
+  font-size: 0;
+  line-height: 0;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.content#videos div,
+.content#behind-the-scenes div {
+  max-width: 135vh;
+  margin: 0 auto;
+}
+.content#videos a,
+.content#behind-the-scenes a {
+  display: inline-block;
+  width: 27.333%;
+  margin: 2% 3%;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+}
+.content#videos a img,
+.content#behind-the-scenes a img {
+  visibility: hidden;
+  width: 100%;
+}
+.content#videos a i,
+.content#behind-the-scenes a i {
+  font-family: 'dakota-alternate';
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 4vh;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  position: absolute;
+  top: 0;
+  left: -20px;
+  z-index: 2;
+  font-style: normal;
+}
+.content#videos a:before,
+.content#behind-the-scenes a:before {
+  content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('../img/icon-play.png') no-repeat 1% 90%;
+  z-index: 1;
+  transition: transform .2s;
+  transform-origin: 12.5% center;
+}
+.content#videos a:after,
+.content#behind-the-scenes a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: background .2s;
+}
+.content#videos a.load:before,
+.content#behind-the-scenes a.load:before {
+  background: url('../img/loader.gif') no-repeat 5% 85%;
+}
+.content#videos a.load:after,
+.content#behind-the-scenes a.load:after {
+  background: rgba(0, 0, 0, 0.8);
+}
+.content#videos a:hover:before,
+.content#behind-the-scenes a:hover:before {
+  transform: scale(1.1);
+}
+.content#videos a:hover:after,
+.content#behind-the-scenes a:hover:after {
+  background: rgba(0, 0, 0, 0.6);
+}
+.content#videos a > span,
+.content#behind-the-scenes a > span {
+  color: #fff;
+  font-size: 2vh;
+  line-height: 1.3em;
+  font-family: 'dakota-alternate';
+  font-weight: normal;
+  text-transform: uppercase;
+  position: absolute;
+  //top: 0;
+  //right: -20%;
+  bottom: 15%;
+  left: 20%;
+  z-index: 3;
+}
+.content#videos a > span span,
+.content#behind-the-scenes a > span span {
+  vertical-align: middle;
+  display: inline-block;
+}
+.content#videos a > span:before,
+.content#behind-the-scenes a > span:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.content#videos .player,
+.content#behind-the-scenes .player {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: #000;
+  transition: opacity 0.3s ease, z-index 0s 0.3s;
+  opacity: 0;
+}
+.content#videos .player iframe,
+.content#behind-the-scenes .player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.content#videos .player.show,
+.content#behind-the-scenes .player.show {
+  transition: opacity 0.3s ease, z-index 0s 0s;
+  z-index: 3;
+  opacity: 1;
+}
